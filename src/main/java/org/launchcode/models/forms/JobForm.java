@@ -28,6 +28,10 @@ public class JobForm {
         Don't forget to add getters and setters
      */
 
+    private String location;
+    private String coreCompentency;
+    private String positionType;
+
     private ArrayList<Employer> employers;
     private ArrayList<Location> locations;
     private ArrayList<CoreCompetency> coreCompetencies;
@@ -37,10 +41,11 @@ public class JobForm {
 
         JobData jobData = JobData.getInstance();
 
-        /*
-            TODO #4 - populate the other ArrayList collections needed in the view
-        */
 
+            //TODO #4 - populate the other ArrayList collections needed in the view
+        locations = jobData.getLocations().findAll();
+        coreCompetencies = jobData.getCoreCompetencies().findAll();
+        positionTypes = jobData.getPositionTypes().findAll();
         employers = jobData.getEmployers().findAll();
 
     }
@@ -59,6 +64,24 @@ public class JobForm {
 
     public void setEmployerId(int employerId) {
         this.employerId = employerId;
+    }
+
+    public String getLocation(){ return location;};
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getCoreCompentency(){ return coreCompentency;}
+
+    public void setCoreCompentency(String coreCompentency){ this.coreCompentency = coreCompentency;}
+
+    public void setPositionType(String positionType) {
+        this.positionType = positionType;
+    }
+
+    public String getPositionType() {
+        return positionType;
     }
 
     public ArrayList<Employer> getEmployers() {

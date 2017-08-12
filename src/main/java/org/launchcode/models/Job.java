@@ -3,7 +3,7 @@ package org.launchcode.models;
 /**
  * Created by LaunchCode
  */
-public class Job {
+public class Job { //creates job
 
     private int id;
     private static int nextId = 1;
