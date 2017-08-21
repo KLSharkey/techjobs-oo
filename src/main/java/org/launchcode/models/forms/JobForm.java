@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class JobForm {
 
     @NotNull
-    @Size(min=1, message = "Name may not be empty")
+    @Size(min=1, message = "Name may not be empty!")
     private String name;
 
     @NotNull

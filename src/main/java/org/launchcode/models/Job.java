@@ -1,5 +1,8 @@
 package org.launchcode.models;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
 /**
  * Created by LaunchCode
  */
@@ -8,7 +11,10 @@ public class Job { //creates job
     private int id;
     private static int nextId = 1;
 
+    @NotNull
+    @Min(1)
     private String name;
+
     private Employer employer;
     private Location location;
     private PositionType positionType;

@@ -32,9 +32,6 @@ public class JobController {
             }
         }
 
-        // TODO #1 - get the Job with the given ID and pass it into the view
-        //Job.getID()
-
         return "job-detail";
     }
 
@@ -55,7 +52,6 @@ public class JobController {
         String positionType = jobForm.getPositionType();
         PositionType positionType1 = new PositionType(positionType);
         ArrayList<Employer> employers = jobForm.getEmployers();
-        //Employer employer = null;
         if (errors.hasErrors()) {
             model.addAttribute("name", "Add Name");
             return "new-job";
@@ -71,21 +67,10 @@ public class JobController {
                         model.addAttribute("job", newJob);
                     }
 
-                    /*String Error = "Must include a Job Name.";
-                    model.addAttribute("Error", Error);
-                    return "new-job";*/
                 }
             }
         }
-        //Job newJob = new Job(name, employer, location1, positionType1, coreCompetency1);
-        //jobData.add(newJob);
-        //String employer = jobForm.gete
 
-        // TODO #6 - Validate the JobForm model, and if valid, create a
-        // new Job and add it to the jobData data store. Then
-        // redirect to the job detail view for the new Job.
-
-        //return "job-detail";
 
 
         return "job-detail";

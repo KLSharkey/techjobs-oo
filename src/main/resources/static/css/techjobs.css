@@ -37,3 +37,6 @@ ul.form-group li {
     display: inline-block;
     padding-right: 15px;
 }
+#Errors {
+    color: red;
+}
