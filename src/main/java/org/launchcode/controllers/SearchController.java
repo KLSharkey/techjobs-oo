@@ -18,7 +18,7 @@ import java.util.ArrayList;
 @RequestMapping("search")
 public class SearchController {
 
-    private JobData jobData = JobData.getInstance();
+    private JobData jobData = JobData.getInstance(); //contains all jobs
 
     @RequestMapping(value = "")
     public String search(Model model) {

@@ -18,7 +18,7 @@ public class SearchForm {
 
     public JobFieldType getSearchField() {
         return searchField;
-    }
+    } //returns enum
 
     public void setSearchField(JobFieldType searchField) {
         this.searchField = searchField;

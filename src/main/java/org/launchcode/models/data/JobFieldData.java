@@ -10,15 +10,15 @@ import java.util.ArrayList;
  */
 public class JobFieldData<T extends JobField> {
 
-    private ArrayList<T> allFields = new ArrayList<>();
+    private ArrayList<T> allFields = new ArrayList<>(); //an AL of JobField objects. Each has value(String) and ID (int)
 
     public ArrayList<T> findAll() {
         return allFields;
     }
 
-    public T findById(int id) {
-        for (T item : allFields) {
-            if (item.getId() == id)
+    public T findById(int id) { //fields like employers, locations, etc (field(id, value))
+        for (T item : allFields) { //that field in fields list
+            if (item.getId() == id) //get by that id assoc. with it
                 return item;
         }
 
